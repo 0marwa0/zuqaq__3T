@@ -166,7 +166,6 @@ const Employes = () => {
   };
   const showPopup = () => {
     setShow(!show);
-    console.log("showwho wofwo");
   };
   return (
     <div className="content" style={{ marginLeft: "225px" }}>
@@ -179,26 +178,9 @@ const Employes = () => {
             justifyContent: "center",
           }}
         >
-          <Col
-            style={{
-              maxWidth: "100%",
-              flex: "1 0 100px",
-              display: "flex",
-
-              flexDirection: "column",
-            }}
-          >
+          <Col className="page_content">
             <div>
-              <Button
-                type="primary"
-                style={{
-                  marginBottom: "15px",
-                  backgroundColor: "#1890ff",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-                onClick={showPopup}
-              >
+              <Button type="primary" className="main_btn" onClick={showPopup}>
                 <FaPlus style={{ marginRight: "7px" }} />
                 New Employee
               </Button>
@@ -216,13 +198,9 @@ const Employes = () => {
                   display: "flex",
 
                   color: "gray",
-                  //   padding: "0 20px",
                 },
-                // pageSizeOptions: ["10", "20", "50"],
 
                 showTotal: (total) => `View search for 1 from 2 search we got.`,
-
-                // showSizeChanger: true,
               }}
             />
           </Col>
@@ -235,7 +213,6 @@ const Employes = () => {
             }}
           ></Col>
         </Row>
-        {/* ,{show ? <SidePuPop handleClose={showPopup} /> : null} */}
       </div>
     </div>
   );
